@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="ornek-1"></p>
+    <script>
+
+        console.log("Örnek 1")
+
+        const name = ['m', 'e', 'h', 'm', 'e', 't'];
+        const namefilter = name.filter((harf, index, self) => self.indexOf(harf) === index);
+        console.log(namefilter)
+
+        console.log("-------------------------------------------")
+
+        console.log("Örnek 2")
+
+        const nameArr = ["m", "e", "h", "m", "e", "t"];
+        
+        function removeSameLetters() {
+            const letters = [];
+            for (let i = 0; i < nameArr.length; i++) {
+                if(letters.indexOf(nameArr[i]) === -1){
+                    letters.push(nameArr[i]);
+                }
+            }
+            return letters;
+        }
+
+        const result = removeSameLetters();
+        console.log(result);
+
+
+    </script>
+</body>
+
+</html>
